@@ -1,0 +1,83 @@
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  .logo {
+    display: block;
+  }
+  &__toggler {
+    width: 24px;
+    height: 15px;
+    display: block;
+    position: relative;
+    z-index: 3;
+    span {
+      width: 100%;
+      height: 1px;
+      background: var(--main-text-color);
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: translateY(-50%);
+      &:nth-child(2) {
+        width: 18px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+      }
+      &:nth-child(3) {
+        top: 100%;
+      }
+    }
+  }
+  &__nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: none;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    padding: 40px;
+    box-sizing: border-box;
+    &-list {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      a {
+        color: var(--main-text-color);
+        font-weight: 400;
+        text-decoration: none;
+      }
+    }
+  }
+  #nav-toggler:checked ~ &__nav {
+    display: flex;
+  }
+  #nav-toggler:checked ~ &__toggler {
+    span {
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      transform: translate(-50%,-50%) rotate(225deg);
+      &:nth-child(2) {
+        transform: translate(-50%,-50%) rotate(-225deg);
+      }
+    }
+  }
+}
