@@ -1,0 +1,30 @@
+.footer {
+  background-color: #EAF5F9;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  &__list {
+    list-style-type: none;
+    text-align: center;
+    padding: 40px 0 20px;
+    margin: 0 auto;
+    li{
+      margin: 0 0 15px;
+    a {
+      font-weight: 400;
+      text-decoration: none;
+      color: var(--main-text-color);
+    }
+    }
+  }
+  &__copyrights {
+    text-align: center;
+    color: #CBDFE6;
+    margin: 0 0 15px;
+  }
+  &__logo {
+    margin: 0 auto 76px;
+  }
+
+;
+}
