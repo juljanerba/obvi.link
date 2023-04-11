@@ -4,10 +4,12 @@ body {
   font-size: 14px;
   line-height: 1.4;
 }
+
 .center {
-  padding-left: calc(50vw - 125px);
-  padding-right: calc(50vw - 125px);
+  padding-left: calc(50vw - 140px);
+  padding-right: calc(50vw - 140px);
 }
+
 img {
   display: block;
   max-width: 100%;
@@ -24,4 +26,22 @@ img {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.button {
+  background-color: var(--main-text-color);
+  color: white;
+  padding: 11px;
+  width: 120px;
+  font-weight: 400;
+  border-radius: 3px;
+  text-align: center;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 900px) {
+  .center {
+    padding-left: calc(50vw - 420px);
+    padding-right: calc(50vw - 420px);
+  }
 }
